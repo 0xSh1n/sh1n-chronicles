@@ -1,57 +1,317 @@
 {{- define "main" }}
 
-<div class="page-single-about">
-  <div class="wrap" style="max-width: 760px;">
-    <article class="post-single">
-      <div class="post-content">
-        {{ .Content }}
+<section class="about-hero">
+  <div class="wrap">
+    <div class="about-hero__inner">
+      <div class="photo">
+        {{- if .Params.photo }}
+        <img src="{{ .Params.photo }}" alt="{{ .Title }}">
+        {{- else }}
+        <div class="photo__placeholder">
+          <span class="big">{{ .Params.initials | default "SH" }}</span>
+          <span>drop your photo here<br>{{ .Params.photoPath | default "/images/photo.jpg" }}</span>
+        </div>
+        {{- end }}
       </div>
-    </article>
+
+      <div class="bio">
+        <span class="eyebrow">WHOAMI</span>
+        <h1>{{ .Title }}</h1>
+
+        {{- with .Params.subtitle }}
+        <p>{{ . }}</p>
+        {{- end }}
+
+        {{- with .Params.role }}
+        <p>I currently work as <strong>{{ . }}</strong>{{ with .Params.workplace }} at {{ . }}{{ end }}.</p>
+        {{- end }}
+
+        {{- with .Params.bio }}
+        <p class="muted">{{ . }}</p>
+        {{- end }}
+
+        {{- with .Params.offdutyLink }}
+        <a href="{{ . }}" class="offduty-link">Find the rest of me at /offduty →</a>
+        {{- end }}
+
+        {{- with .Params.credentials }}
+        <div class="credentials">
+          {{- range . }}
+          <span class="credential">{{ . }}</span>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+{{- if .Params.kudos }}
+<section class="section" id="kudos">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__label">CONNECTIONS</div>
+      <h2>Kudos</h2>
+      <p class="section__sub">Those refusing to let me settle.</p>
+    </div>
+
+    <div class="friends">
+      {{- range .Params.kudos }}
+      <div class="friend">
+        <div class="friend__avatar">{{ .avatar }}</div>
+        <div class="friend__name">{{ .name }}</div>
+        <div class="friend__role">{{ .role }}</div>
+        <div class="friend__links">
+          {{- with .github }}<a href="{{ . }}">GitHub</a>{{ end }}
+          {{- with .twitter }}<a href="{{ . }}">X</a>{{ end }}
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
 
 <style>
-  .page-single-about h2 {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--amber);
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+.about-hero {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero__inner {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  padding: 16px;
+}
+
+.photo__placeholder .big {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--amber);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  border: 1px solid var(--amber-dim);
+  background: var(--amber-dim);
+  padding: 5px 12px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+
+.bio h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.bio p {
+  color: var(--ink);
+  font-size: 16px;
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+.bio p.muted {
+  color: var(--muted);
+}
+
+.bio strong {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.bio .offduty-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--amber);
+  border-bottom: 1px solid var(--amber-dim);
+  padding-bottom: 2px;
+  margin-top: 8px;
+  transition: border-color .15s ease;
+}
+
+.bio .offduty-link:hover {
+  border-bottom-color: var(--amber);
+}
+
+.credentials {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.credential {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--teal);
+  border: 1px solid var(--teal-dim);
+  background: var(--teal-dim);
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+/* Kudos Section */
+#kudos {
+  padding: 64px 0;
+}
+
+.section__head {
+  margin-bottom: 36px;
+}
+
+.section__label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+}
+
+#kudos h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.section__sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+  max-width: 520px;
+}
+
+.friends {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.friend {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.friend:hover {
+  border-color: var(--amber-dim);
+  transform: translateY(-2px);
+}
+
+.friend__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+
+.friend__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.friend__role {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 14px;
+  min-height: 34px;
+}
+
+.friend__links {
+  display: flex;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+
+.friend__links a {
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 4px 9px;
+  border-radius: 3px;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.friend__links a:hover {
+  color: var(--amber);
+  border-color: var(--amber-dim);
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .about-hero__inner {
+    grid-template-columns: 1fr;
   }
 
-  .page-single-about p {
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 1.8;
-    max-width: 760px;
-    margin-bottom: 1.5rem;
+  .photo {
+    width: 140px;
+    height: 140px;
   }
 
-  .about-clearances {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
+  .friends {
+    grid-template-columns: 1fr;
   }
-
-  .clearance {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--teal);
-    border: 1px solid var(--teal-dim);
-    background: var(--teal-dim);
-    padding: 4px 10px;
-    border-radius: 3px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .about-separator {
-    border-top: 1px solid var(--border);
-    margin: 4rem 0;
-    padding-top: 4rem;
-  }
+}
 </style>
 
 {{- end }}
