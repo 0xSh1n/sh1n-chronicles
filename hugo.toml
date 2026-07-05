@@ -11,7 +11,7 @@ enableRobotsTXT = true
 unsafe = true
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS"]
 
 [params]
 env = "production"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Sh1n Chronicles</title>
+    <link>https://0xSh1n.github.io/sh1n-chronicles/categories/research/</link>
+    <description>Recent content in Research on Sh1n Chronicles</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://0xSh1n.github.io/sh1n-chronicles/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Sh1n Chronicles</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/research/first-research/</link>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/research/first-research/</guid>
+      <description>&lt;h2 id=&#34;welcome&#34;&gt;Welcome&lt;/h2&gt;&#xA;&lt;p&gt;This is where the deep dives happen. Research, forensics, threat intelligence, and everything in between.&lt;/p&gt;&#xA;&lt;p&gt;Each post here explores a topic thoroughly — not quick takes, but actual investigation and learning.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-to-expect&#34;&gt;What to expect&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Forensics deep-dives&lt;/strong&gt;: DFIR techniques, memory analysis, incident reconstruction&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Threat Intelligence&lt;/strong&gt;: Analyzing TTPs, malware campaigns, security trends&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Detection Engineering&lt;/strong&gt;: Sigma rules, logging strategies, detection approaches&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cryptography research&lt;/strong&gt;: Challenges, solutions, algorithm breakdowns&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Security tools &amp;amp; techniques&lt;/strong&gt;: In-depth reviews and walkthroughs&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

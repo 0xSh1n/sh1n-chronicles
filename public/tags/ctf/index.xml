@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctf on Sh1n Chronicles</title>
+    <link>https://0xSh1n.github.io/sh1n-chronicles/tags/ctf/</link>
+    <description>Recent content in Ctf on Sh1n Chronicles</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://0xSh1n.github.io/sh1n-chronicles/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building NeuralDump: Designing a Box Around a Real Memory Leak</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/posts/neuraldump-proving-grounds/</link>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/posts/neuraldump-proving-grounds/</guid>
+      <description>&lt;p&gt;Notes from turning a real-world memory disclosure bug into a Proving Grounds machine — including the three exploit chains I built and threw away.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

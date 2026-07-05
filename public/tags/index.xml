@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sh1n Chronicles</title>
+    <link>https://0xSh1n.github.io/sh1n-chronicles/tags/</link>
+    <description>Recent content in Tags on Sh1n Chronicles</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://0xSh1n.github.io/sh1n-chronicles/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/intro/</link>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/intro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/research/</link>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Loader</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/loader/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/loader/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/malware/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/windows/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Active-Directory</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/active-directory/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Adcs</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/adcs/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/adcs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dfir</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/dfir/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/dfir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C2</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/c2/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/c2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/network/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ctf</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/ctf/</link>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writeup</title>
+      <link>https://0xSh1n.github.io/sh1n-chronicles/tags/writeup/</link>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://0xSh1n.github.io/sh1n-chronicles/tags/writeup/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
