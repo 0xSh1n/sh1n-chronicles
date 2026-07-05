@@ -1,3 +1,90 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://sh1n-chronicles.github.io/"
+languageCode = "en-us"
+title = "Sh1n Chronicles"
+theme = "PaperMod"
+paginate = 5
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+env = "production"
+title = "Sh1n Chronicles"
+description = "Research, Writeups & Incident Chronicles"
+keywords = ["cybersecurity", "forensics", "research", "writeups", "threat intelligence"]
+author = "0xSh1n"
+images = ["og-image.png"]
+
+# Search
+search_hidden = false
+
+# Archives
+ShowArchives = true
+
+# UI Tweaks
+ShowToc = true
+TocOpen = true
+ShowWordCount = true
+ShowReadingTime = true
+ShowShareButtons = false
+
+# Homepage
+ShowPostsPerSection = true
+
+[params.profileMode]
+enabled = true
+title = "Sh1n Chronicles"
+subtitle = "Deep Research | Incident Analysis | CTF Writeups"
+imageUrl = "profile.png"
+imageTitle = ""
+imageWidth = 150
+imageHeight = 150
+buttons = [
+    {name = "Research", url = "research"},
+    {name = "Writeups", url = "writeups"},
+    {name = "Analysis", url = "analysis"},
+    {name = "Archive", url = "archives"}
+]
+
+[params.homeInfoParams]
+Title = "Welcome"
+Content = "Forensics deep dives, threat intelligence breakdowns, and CTF chronicles. A mix of serious research and controlled chaos."
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/yourusername"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/yourusername"
+
+[params.cover]
+hidden = false
+hiddenInList = false
+hiddenInSingle = false
+relative = false
+
+[menu]
+[[menu.main]]
+identifier = "research"
+name = "Research"
+url = "/research"
+weight = 1
+[[menu.main]]
+identifier = "writeups"
+name = "Writeups"
+url = "/writeups"
+weight = 2
+[[menu.main]]
+identifier = "analysis"
+name = "Analysis"
+url = "/analysis"
+weight = 3
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
+weight = 4

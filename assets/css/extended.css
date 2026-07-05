@@ -1,0 +1,138 @@
+/* Sh1n Chronicles - Custom PaperMod Styling */
+
+/* Color Scheme - Customize here */
+:root {
+  --primary-color: #00d4ff;
+  --secondary-color: #ff006e;
+  --background: #0a0e27;
+  --surface: #16213e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent: #00d4ff;
+}
+
+/* Dark mode adjustments */
+:root {
+  --paper-bg: var(--background);
+  --paper-tag-bg: var(--surface);
+  --paper-tag-border: var(--primary-color);
+}
+
+/* Hero Section */
+.profile-text h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.profile-text p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Menu Styling */
+nav a {
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Tags & Categories */
+.post-meta a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.tag {
+  background: var(--surface);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin: 0.25rem;
+}
+
+/* Post Title */
+.post-title {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Code Blocks */
+code {
+  background: var(--surface);
+  color: var(--primary-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--surface);
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Divider */
+hr {
+  border-color: var(--surface);
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--primary-color);
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th {
+  background: var(--surface);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--surface);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+}
