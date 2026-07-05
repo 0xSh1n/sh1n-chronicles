@@ -1,138 +1,146 @@
-/* Sh1n Chronicles - Custom PaperMod Styling */
+/* Sh1n Chronicles - Design System */
 
-/* Color Scheme - Customize here */
 :root {
-  --primary-color: #00d4ff;
-  --secondary-color: #ff006e;
-  --background: #0a0e27;
-  --surface: #16213e;
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --accent: #00d4ff;
+  --void: #0a0d12;
+  --surface: #12161d;
+  --surface-2: #191f28;
+  --border: #262d38;
+  --ink: #dbe1e8;
+  --muted: #7c8797;
+  --amber: #ff6b4a;
+  --amber-dim: #ff6b4a2e;
+  --red: #d6455a;
+  --red-dim: #d6455a26;
+  --teal: #38c9a6;
+  --teal-dim: #38c9a626;
+  --blue: #5b8dbe;
+  --blue-dim: #5b8dbe26;
+  --yellow: #f2c94c;
+  --yellow-dim: #f2c94c26;
+  --green: #4ade80;
+  --green-dim: #4ade8026;
 }
 
-/* Dark mode adjustments */
-:root {
-  --paper-bg: var(--background);
-  --paper-tag-bg: var(--surface);
-  --paper-tag-border: var(--primary-color);
+/* About Page Specific */
+.page-single-about {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
 }
 
-/* Hero Section */
-.profile-text h1 {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -1px;
+.page-single-about article {
+  padding: 64px 0;
 }
 
-.profile-text p {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
+.page-single-about h1,
+.page-single-about h2,
+.page-single-about h3 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
 }
 
-/* Menu Styling */
-nav a {
-  color: var(--text-primary);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--primary-color);
-}
-
-/* Tags & Categories */
-.post-meta a {
-  color: var(--primary-color);
-  text-decoration: none;
-  border-bottom: 1px solid var(--primary-color);
-}
-
-.tag {
-  background: var(--surface);
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  margin: 0.25rem;
-}
-
-/* Post Title */
-.post-title {
-  color: var(--text-primary);
+.page-single-about h1 {
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  color: var(--amber);
+  margin-bottom: 2rem;
 }
 
-/* Code Blocks */
-code {
-  background: var(--surface);
-  color: var(--primary-color);
-  padding: 0.2rem 0.4rem;
+.page-single-about h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  font-size: 12px;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-single-about p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.page-single-about ul {
+  color: var(--muted);
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.page-single-about ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* About Clearances Section */
+.about-clearances {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.clearance {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--teal);
+  border: 1px solid var(--teal-dim);
+  background: var(--teal-dim);
+  padding: 4px 10px;
   border-radius: 3px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-pre {
-  background: var(--surface);
-  border-left: 3px solid var(--primary-color);
+/* About Card Separator */
+.about-separator {
+  border-top: 1px solid var(--border);
+  margin: 4rem 0;
+  padding-top: 4rem;
 }
 
-/* Links */
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Footer Customization */
+footer.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
 }
 
-a:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
+footer.footer a {
+  color: var(--amber);
+  transition: color 0.15s ease;
 }
 
-/* Divider */
-hr {
-  border-color: var(--surface);
-}
-
-/* Blockquote */
-blockquote {
-  border-left: 3px solid var(--primary-color);
-  color: var(--text-secondary);
-  padding-left: 1rem;
-  margin: 1rem 0;
-}
-
-/* Table */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-table th {
-  background: var(--surface);
-  color: var(--primary-color);
-  padding: 0.5rem;
-  text-align: left;
-  border-bottom: 2px solid var(--primary-color);
-}
-
-table td {
-  padding: 0.5rem;
-  border-bottom: 1px solid var(--surface);
+footer.footer a:hover {
+  color: var(--ink);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .profile-text h1 {
-    font-size: 1.75rem;
+@media (max-width: 760px) {
+  .page-single-about {
+    padding: 0 20px;
   }
 
-  .post-title {
+  .page-single-about h1 {
     font-size: 1.5rem;
+  }
+
+  .page-single-about h2 {
+    font-size: 11px;
+  }
+
+  .about-clearances {
+    flex-direction: column;
+  }
+
+  .clearance {
+    display: inline-block;
   }
 }
