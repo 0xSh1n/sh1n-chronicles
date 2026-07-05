@@ -113,12 +113,34 @@ jobs:
 
       - name: Build
         run: |
-          echo "Building the project..."
-          hugo build \
+          echo "Building the project to ./public ..."
+          hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --destination ./public \
             --cacheDir "${{ runner.temp }}/hugo_cache"
+
+      - name: Verify generated site
+        run: |
+          echo "Public directory listing:"
+          if [ -d public ]; then
+            ls -la public | head -20
+            echo "Size summary:"
+            du -sh public
+          else
+            echo "ERROR: public directory not found"
+            exit 1
+          fi
+          if [ ! -f public/index.html ]; then
+            echo "ERROR: public/index.html missing — deployment will fail"
+            exit 1
+          fi
+
+      - name: Show artifact that will be uploaded
+        run: |
+          echo "Files to upload:"
+          find public -maxdepth 2 -type f | head -30
 
       - name: Cache save
         uses: actions/cache/save@v5
@@ -136,7 +158,6 @@ jobs:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v5
