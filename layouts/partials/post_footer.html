@@ -1,0 +1,20 @@
+{{- $posts := (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+{{- $index := index $posts }}
+{{- $prev := null }}
+{{- $next := null }}
+
+{{- range $i, $p := $posts }}
+  {{- if eq .File.UniqueID $.File.UniqueID }}
+    {{- if gt $i 0 }}{{- $prev = index $posts (sub $i 1) }}{{- end }}
+    {{- if lt (add $i 1) (len $posts) }}{{- $next = index $posts (add $i 1) }}{{- end }}
+  {{- end }}
+{{- end }}
+
+<div class="post-nav">
+  {{- if $prev }}
+  <a class="prev" href="{{ $prev.Permalink }}">← {{ $prev.Title }}</a>
+  {{- end }}
+  {{- if $next }}
+  <a class="next" href="{{ $next.Permalink }}">{{ $next.Title }} →</a>
+  {{- end }}
+</div>
