@@ -6,7 +6,7 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ .Description | default .Site.Params.description }}">
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
     {{- partial "header.html" . }}
