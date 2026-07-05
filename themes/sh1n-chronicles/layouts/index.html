@@ -32,7 +32,7 @@
     </div>
 
     <div class="cases">
-      {{- range first 12 (where site.RegularPages "Kind" "page") }}
+      {{- range first 4 (where site.RegularPages "Kind" "page") }}
       <a href="{{ .Permalink }}" class="case">
         <div class="case__meta">
           <span class="case__id">{{ .Title | truncate 12 }}</span>
