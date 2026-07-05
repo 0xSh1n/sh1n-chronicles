@@ -1,7 +1,6 @@
 {{- $posts := (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-{{- $index := index $posts }}
-{{- $prev := null }}
-{{- $next := null }}
+{{- $prev := "" }}
+{{- $next := "" }}
 
 {{- range $i, $p := $posts }}
   {{- if eq .File.UniqueID $.File.UniqueID }}
