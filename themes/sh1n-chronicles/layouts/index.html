@@ -1,6 +1,5 @@
 {{- define "main" }}
 
-<!-- Hero Section -->
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">INCIDENT LOG // ACTIVE</span>
@@ -22,7 +21,6 @@
   </div>
 </section>
 
-<!-- Activity Log Section -->
 <section class="section" id="cases">
   <div class="wrap">
     <div class="section__head">
@@ -34,8 +32,7 @@
     </div>
 
     <div class="cases">
-      {{- $posts := (where site.RegularPages "Type" "in" (slice "writeups" "posts")) }}
-      {{- range first 6 $posts }}
+      {{- range first 6 (where site.RegularPages "Kind" "page") }}
       <a href="{{ .Permalink }}" class="case">
         <div class="case__meta">
           <span class="case__id">{{ .Title | truncate 12 }}</span>

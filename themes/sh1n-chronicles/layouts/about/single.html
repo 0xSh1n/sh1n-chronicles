@@ -1,0 +1,57 @@
+{{- define "main" }}
+
+<div class="page-single-about">
+  <div class="wrap" style="max-width: 760px;">
+    <article class="post-single">
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</div>
+
+<style>
+  .page-single-about h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-single-about p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 760px;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-clearances {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .clearance {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--teal);
+    border: 1px solid var(--teal-dim);
+    background: var(--teal-dim);
+    padding: 4px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .about-separator {
+    border-top: 1px solid var(--border);
+    margin: 4rem 0;
+    padding-top: 4rem;
+  }
+</style>
+
+{{- end }}

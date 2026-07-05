@@ -1,0 +1,12 @@
+name = "Sh1n Chronicles"
+license = "MIT"
+licenselink = "https://github.com/0xSh1n/sh1n-chronicles/LICENSE"
+description = "Custom minimal theme for security research blog"
+homepage = "https://github.com/0xSh1n/sh1n-chronicles"
+tags = ["blog", "security", "minimal", "dark"]
+features = ["responsive"]
+min_version = "0.120.0"
+
+[author]
+name = "0xSh1n"
+homepage = "https://github.com/0xSh1n"

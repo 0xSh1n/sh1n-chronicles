@@ -1,0 +1,36 @@
+{{- define "main" }}
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <div class="section__label">ARCHIVE</div>
+        <h2>{{ .Title }}</h2>
+      </div>
+      <div class="section__count">{{ len .Pages }} posts</div>
+    </div>
+
+    <div class="cases">
+      {{- range .Pages }}
+      <a href="{{ .Permalink }}" class="case">
+        <div class="case__meta">
+          <span class="case__id">{{ .Title | truncate 12 }}</span>
+          <span>{{ .Date.Format "JAN 02" }}</span>
+        </div>
+        <div>
+          <h3 class="case__title">{{ .Title }}</h3>
+          <p class="case__excerpt">{{ .Summary | truncate 150 }}</p>
+          <div class="case__tags">
+            {{- range .Params.tags }}
+            <span class="tag">{{ . | upper }}</span>
+            {{- end }}
+          </div>
+        </div>
+        <span class="badge badge--high">POST</span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{- end }}
