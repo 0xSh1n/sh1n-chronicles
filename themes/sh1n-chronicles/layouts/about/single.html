@@ -22,8 +22,8 @@
         <p>{{ . }}</p>
         {{- end }}
 
-        {{- with .Params.role }}
-        <p>I currently work as <strong>{{ . }}</strong>{{ with .Params.workplace }} at {{ . }}{{ end }}.</p>
+        {{- if .Params.role }}
+        <p>I currently work as <strong>{{ .Params.role }}</strong>{{ if .Params.workplace }} at {{ .Params.workplace }}{{ end }}.</p>
         {{- end }}
 
         {{- with .Params.bio }}
