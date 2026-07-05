@@ -426,10 +426,34 @@ h2 {
   white-space: nowrap;
 }
 
+.badge--critical {
+  color: var(--red);
+  background: var(--red-dim);
+  border: 1px solid var(--red-dim);
+}
+
 .badge--high {
   color: var(--amber);
   background: var(--amber-dim);
   border: 1px solid var(--amber-dim);
+}
+
+.badge--medium {
+  color: var(--yellow);
+  background: var(--yellow-dim);
+  border: 1px solid var(--yellow-dim);
+}
+
+.badge--low {
+  color: var(--green);
+  background: var(--green-dim);
+  border: 1px solid var(--green-dim);
+}
+
+.badge--result {
+  color: var(--green);
+  background: var(--green-dim);
+  border: 1px solid var(--green-dim);
 }
 
 /* Post */
