@@ -1,36 +1,34 @@
 ---
-title: "About"
+title: "The name's Jerry Dadonougbo — most people know me as Sh1n."
 layout: "single"
 url: "/about"
 type: "about"
+initials: "JD"
+photoPath: "/images/jerry.jpg"
+subtitle: "23 years old. Cybersecurity enthusiast, thriving somewhere between breaking things and fixing them."
+role: "DFIR analyst at bjCSIRT"
+workplace: "Benin's national incident response team"
+bio: "This blog was born to force myself to hit the extra miles and get out of my comfort zone — to become the best at what I do."
+offdutyLink: "/off-duty/"
+credentials:
+  - "OSCP"
+  - "PJPT"
+  - "HTB CDSA"
+  - "HTB CWES"
+kudos:
+  - name: "Friend Name"
+    avatar: "?"
+    role: "One line on what they do / how you know them"
+    github: "#"
+    twitter: "#"
+  - name: "Friend Name"
+    avatar: "?"
+    role: "One line on what they do / how you know them"
+    github: "#"
+    twitter: "#"
+  - name: "Friend Name"
+    avatar: "?"
+    role: "One line on what they do / how you know them"
+    github: "#"
+    twitter: "#"
 ---
-
-# Sh1n
-
-DFIR analyst working across both sides of the fence — red team offense, blue team detection, and everything in between. Competes with CTF team Escadron. This blog is where the rest of it lives — the stuff that doesn't fit in an incident report.
-
-## Clearances & Certifications
-
-<div class="about-clearances">
-  <span class="clearance">OSCP</span>
-  <span class="clearance">PJPT</span>
-  <span class="clearance">HTB CDSA</span>
-  <span class="clearance">HTB CWES</span>
-</div>
-
-<div class="about-separator"></div>
-
-## Focus Areas
-
-- **DFIR & Forensics** — Memory analysis, artifact recovery, timeline reconstruction
-- **Malware Analysis** — Reverse engineering, static/dynamic analysis, C2 decryption
-- **Threat Intelligence** — Campaign attribution, TTP tracking, indicator structuring
-- **Detection Engineering** — Sigma rules, correlation logic, SOC operations
-- **Cryptography** — CTF challenges, oracle attacks, algorithm breaking
-- **Security Research** — Zero-day analysis, vulnerability exploitation, tool development
-
-## About This Blog
-
-Reverse-engineering what everyone else skips. Malware internals, live incident analysis, and CTF writeups that show the dead ends and the wrong turns — not just the flag.
-
-Built with [Hugo](https://gohugo.io) & [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
