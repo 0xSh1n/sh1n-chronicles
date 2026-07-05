@@ -1,0 +1,110 @@
+{{- define "main" }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">INCIDENT LOG // ACTIVE</span>
+    <h1>Reverse-engineering what <span>everyone else skips</span>.</h1>
+    <p class="hero__sub">Malware internals, live incident analysis, and CTF writeups that show the dead ends and the wrong turns — not just the flag.</p>
+    <p class="hero__fr">Security research, DFIR, and forensic deep-dives from the field.</p>
+    <div class="hero__ctas">
+      <a href="#cases" class="btn btn--primary">Browse the activity log</a>
+      <a href="/about" class="btn btn--ghost">Who's behind this</a>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal__bar">
+        <span></span><span></span><span></span>
+        <span class="terminal__title">sh1n@chronicles:~</span>
+      </div>
+      <div class="terminal__body" id="termBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Activity Log Section -->
+<section class="section" id="cases">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <div class="section__label">ACTIVITY LOG</div>
+        <h2>Latest entries</h2>
+      </div>
+      <div class="section__count">Recent posts</div>
+    </div>
+
+    <div class="cases">
+      {{- $posts := (where site.RegularPages "Type" "in" (slice "writeups" "posts")) }}
+      {{- range first 6 $posts }}
+      <a href="{{ .Permalink }}" class="case">
+        <div class="case__meta">
+          <span class="case__id">{{ .Title | truncate 12 }}</span>
+          <span>{{ .Date.Format "JAN 02" }}</span>
+        </div>
+        <div>
+          <h3 class="case__title">{{ .Title }}</h3>
+          <p class="case__excerpt">{{ .Summary | truncate 150 }}</p>
+          <div class="case__tags">
+            {{- range .Params.tags }}
+            <span class="tag">{{ . | upper }}</span>
+            {{- end }}
+          </div>
+        </div>
+        <span class="badge badge--high">POST</span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<script>
+  const lines = [
+    { p: '$ whoami', r: 'sh1n // DFIR analyst, red+blue, CTF player' },
+    { p: '$ cat clearance.txt', r: 'OSCP · PJPT · HTB-CDSA · HTB-CWES' },
+    { p: '$ ./chronicles --status', r: 'listening for the next incident...' }
+  ];
+
+  const el = document.getElementById('termBody');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function renderStatic(){
+    el.innerHTML = lines.map(l =>
+      `<span class="prompt">${l.p}</span>\n<span class="result">${l.r}</span>\n`
+    ).join('\n');
+  }
+
+  async function typeLine(text, cls){
+    return new Promise(resolve => {
+      let i = 0;
+      const span = document.createElement('span');
+      span.className = cls;
+      el.appendChild(span);
+      const interval = setInterval(() => {
+        span.textContent += text[i];
+        i++;
+        if(i >= text.length){
+          clearInterval(interval);
+          el.appendChild(document.createTextNode('\n'));
+          resolve();
+        }
+      }, 22);
+    });
+  }
+
+  async function boot(){
+    el.innerHTML = '';
+    for(const line of lines){
+      await typeLine(line.p, 'prompt');
+      await new Promise(r => setTimeout(r, 150));
+      await typeLine(line.r, 'result');
+      await new Promise(r => setTimeout(r, 250));
+    }
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    el.appendChild(cursor);
+  }
+
+  if(reduced){ renderStatic(); } else { boot(); }
+</script>
+
+{{- end }}
